@@ -1,9 +1,9 @@
 :root{
   --ink: #0b1220;
   --navy: #0b1f3a;
-  --accent: #2aa6b3;
+  --accent: #1f6feb;
   --bg: #ffffff;
-  --muted: rgba(0,0,0,.02);
+  --muted: rgba(11,18,32,.03);
 
   --max: 1120px;
   --pad-mobile: 24px;
@@ -152,7 +152,7 @@ a:hover{
   inset:0;
   background:
     linear-gradient(rgba(0,0,0,.68), rgba(0,0,0,.68)),
-    url("assets/industrial.png") center/cover no-repeat;
+    url("assets/exterior.png") center/cover no-repeat;
   transform: scale(1.02);
 }
 
