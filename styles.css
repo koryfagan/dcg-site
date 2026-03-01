@@ -1,9 +1,9 @@
 :root{
   --ink: #0b1220;
   --navy: #0b1f3a;
-  --accent: #1f6feb;
+  --accent: #2aa6b3;
   --bg: #ffffff;
-  --muted: rgba(11,18,32,.03);
+  --muted: rgba(0,0,0,.02);
 
   --max: 1120px;
   --pad-mobile: 24px;
@@ -79,14 +79,14 @@ a:hover{
 }
 
 .brand__img{
-  height: 48px;
+  height: 28px;
   width: auto;
   display: block;
 }
 
-/* Compatibility alias for your current HTML (.logo) */
+/* FIX: support DCG index.html using .logo */
 .logo{
-  height: 48px;
+  height: 28px;
   width: auto;
   display: block;
 }
@@ -158,8 +158,8 @@ a:hover{
   position:absolute;
   inset:0;
   background:
-    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-    url("assets/exterior.png") center/cover no-repeat;
+    linear-gradient(rgba(0,0,0,.68), rgba(0,0,0,.68)),
+    url("assets/exterior.png") center/cover no-repeat; /* FIX: exterior.png */
   transform: scale(1.02);
 }
 
@@ -206,6 +206,32 @@ a:hover{
   font-size: 13px;
 }
 
+/* FIX: style current DCG hero wording (subtitle/lead/h1) if those classes exist */
+.hero .subtitle{
+  color: rgba(255,255,255,.78);
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.hero h1{
+  margin: 14px 0 0;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  font-size: 44px;
+}
+
+.hero .lead{
+  margin: 18px 0 0;
+  color: rgba(255,255,255,.86);
+  font-size: 18px;
+  max-width: 52ch;
+}
+
 /* =========================
    SECTIONS
 ========================= */
@@ -218,6 +244,11 @@ a:hover{
   background: var(--muted);
 }
 
+/* FIX: automatic alternating section background like TPEA */
+main > section.section:nth-of-type(even){
+  background: var(--muted);
+}
+
 .section__header{
   margin-bottom: 24px;
 }
@@ -227,6 +258,10 @@ a:hover{
   font-size: 30px;
   letter-spacing: -0.01em;
 }
+
+/* =========================
+   AGREED ADDITION ONLY
+========================= */
 
 .section__header h3{
   margin: 0;
@@ -286,6 +321,22 @@ a:hover{
   margin: 6px 0;
 }
 
+/* Trial card — match btn--accent background + white text */
+.card--trial{
+  background: var(--accent);
+  color: #fff;
+}
+
+.card--trial h3{
+  color: #fff;
+}
+
+.card--trial p,
+.card--trial ul,
+.card--trial li{
+  color: rgba(255,255,255,.86);
+}
+
 /* =========================
    CONTACT
 ========================= */
@@ -326,7 +377,7 @@ a:hover{
 }
 
 /* =========================
-   SUBTLE
+   SUBTLE (NEW)
 ========================= */
 
 .subtle{
@@ -349,7 +400,8 @@ a:hover{
     display: flex;
   }
 
-  .hero__title{
+  .hero__title,
+  .hero h1{
     font-size: 62px;
   }
 
@@ -377,7 +429,8 @@ a:hover{
 }
 
 @media (max-width: 420px){
-  .hero__title{
+  .hero__title,
+  .hero h1{
     font-size: 38px;
   }
 }
