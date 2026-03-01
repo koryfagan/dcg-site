@@ -2,160 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Digital Capital Group</title>
-  <meta name="description" content="Applied AI Capital Group based in New Zealand. Establishing and governing standalone operating companies built on structural AI opportunity." />
+  <meta name="description" content="Applied AI capital group for New Zealand mid-market businesses." />
 
   <meta property="og:title" content="Digital Capital Group" />
-  <meta property="og:description" content="Applied AI Capital Group based in New Zealand." />
+  <meta property="og:description" content="Applied AI capital group for New Zealand mid-market businesses." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="og.png" />
 
   <link rel="icon" href="favicon.png" />
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header class="nav">
-  <div class="wrap nav__inner">
-    <a href="#top" class="brand">
-      <img src="dcg-logo.png" alt="Digital Capital Group" class="logo" />
-    </a>
-    <nav class="nav__links">
-      <a href="#how">How We Operate</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="brand brand--logo" href="#top" aria-label="Digital Capital Group home">
+        <img src="dcg-logo.png" alt="Digital Capital Group" class="brand__img" height="48" />
+      </a>
 
-<main id="top">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap">
-      <h1>Digital Capital Group</h1>
-      <p class="subtitle">Applied AI Capital Group</p>
-
-      <p class="lead">
-        Digital Capital Group is a New Zealand-based applied AI capital group.
-      </p>
-
-      <p>
-        It identifies structural opportunities where existing AI capability can materially improve the economics or defensibility of mid-market businesses.
-      </p>
-
-      <p>
-        DCG establishes standalone operating companies around those opportunities, provides capital and intellectual property, and governs them with institutional discipline.
-      </p>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- HOW WE OPERATE -->
-  <section id="how" class="section">
-    <div class="wrap">
-      <h2>How We Operate</h2>
+  <main id="top">
 
-      <p>
-        DCG does not provide consulting or advisory services.
-      </p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__inner">
+        <div class="kicker">APPLIED AI CAPITAL GROUP</div>
 
-      <p>
-        It forms companies.
-      </p>
+        <h1 class="hero__title">
+          Digital Capital Group
+        </h1>
 
-      <p>
-        Each company is built around:
-      </p>
+        <p class="hero__sub">
+          Digital Capital Group is a New Zealand-based applied AI capital group.
+        </p>
 
-      <ul>
-        <li>A clearly defined structural inefficiency</li>
-        <li>Proven, existing AI capability</li>
-        <li>A disciplined economic model</li>
-        <li>Independent operational leadership</li>
-      </ul>
+        <p class="hero__sub">
+          It identifies structural opportunities where existing AI capability can materially improve the economics or defensibility of mid-market businesses.
+        </p>
 
-      <p>
-        DCG supplies capital, shared intellectual property, and governance oversight.
-      </p>
+        <p class="hero__sub">
+          DCG establishes standalone operating companies around those opportunities, provides capital and intellectual property, and governs them with institutional discipline.
+        </p>
+      </div>
+    </section>
 
-      <p>
-        The objective is durable operating businesses, not experiments.
-      </p>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="wrap">
+        <header class="section__header">
+          <h2>How We Operate</h2>
+        </header>
+
+        <p>DCG does not provide consulting or advisory services.</p>
+        <p>It forms companies.</p>
+
+        <p>Each company is built around:</p>
+        <ul>
+          <li>A clearly defined structural inefficiency</li>
+          <li>Proven, existing AI capability</li>
+          <li>A disciplined economic model</li>
+          <li>Independent operational leadership</li>
+        </ul>
+
+        <p>DCG supplies capital, shared intellectual property, and governance oversight.</p>
+        <p>The objective is durable operating businesses, not experiments.</p>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO (optional placeholder, leave if you want parity with your current live page) -->
+    <section class="section section--muted">
+      <div class="wrap">
+        <header class="section__header">
+          <h2>Portfolio</h2>
+        </header>
+
+        <p><strong>The Private Equity Advantage (TPEA)</strong></p>
+        <p>An operating company applying institutional decision architecture to New Zealand owner-led businesses.</p>
+        <p>Additional companies will be established where structural opportunity and disciplined economics align.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="wrap">
+        <header class="section__header">
+          <h2>Contact</h2>
+        </header>
+
+        <p>
+          Digital Capital Group<br />
+          Auckland, New Zealand
+        </p>
+
+        <p>
+          enquiries@digitalcapitalgroup.co.nz
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div>© <span id="year"></span> Digital Capital Group</div>
     </div>
-  </section>
+  </footer>
 
-  <!-- PORTFOLIO -->
-  <section id="portfolio" class="section section-dark">
-    <div class="wrap">
-      <h2>Portfolio</h2>
-
-      <h3>The Private Equity Advantage (TPEA)</h3>
-
-      <p>
-        An operating company applying institutional decision architecture to New Zealand owner-led businesses.
-      </p>
-
-      <p>
-        Additional companies will be established where structural opportunity and disciplined economics align.
-      </p>
-    </div>
-  </section>
-
-  <!-- APPROACH -->
-  <section class="section">
-    <div class="wrap">
-      <h2>Approach</h2>
-
-      <p>
-        DCG is privately funded.
-      </p>
-
-      <p>
-        It operates selectively.
-      </p>
-
-      <p>
-        It does not pursue scale for its own sake.
-      </p>
-
-      <p>
-        It builds businesses designed to withstand scrutiny and time.
-      </p>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="wrap">
-      <h2>Contact</h2>
-
-      <p>
-        Digital Capital Group<br>
-        Auckland, New Zealand
-      </p>
-
-      <p>
-        enquiries@digitalcapitalgroup.co.nz
-      </p>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="wrap">
-    © <span id="year"></span> Digital Capital Group
-  </div>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
