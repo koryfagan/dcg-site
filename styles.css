@@ -3,7 +3,7 @@
   --navy: #0b1f3a;
   --accent: #1f6feb;
   --bg: #ffffff;
-  --muted-bg: rgba(11,18,32,.03);
+  --muted: rgba(11,18,32,.03);
 
   --max: 1120px;
   --pad-mobile: 24px;
@@ -28,7 +28,7 @@ body{
   background: var(--bg);
   color: var(--ink);
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 a{
@@ -37,7 +37,7 @@ a{
 }
 
 a:hover{
-  opacity: .85;
+  opacity: .9;
 }
 
 .wrap{
@@ -63,20 +63,39 @@ a:hover{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 0;
+  padding: 14px 0;
+  gap: 16px;
 }
 
+.brand{
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.brand--logo{
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand__img{
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+/* Compatibility alias for your current HTML (.logo) */
 .logo{
-  height: 42px;
+  height: 48px;
   width: auto;
   display: block;
 }
 
 .nav__links{
   display: none;
-  gap: 28px;
+  gap: 26px;
   font-size: 14px;
-  color: rgba(0,0,0,.65);
+  color: rgba(0,0,0,.70);
 }
 
 .nav__links a{
@@ -84,56 +103,107 @@ a:hover{
 }
 
 /* =========================
-   HERO (WITH IMAGE)
+   BUTTONS
+========================= */
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  font-weight: 650;
+  font-size: 14px;
+  border: 1px solid transparent;
+  border-radius: 0;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn--primary{
+  background: var(--navy);
+  color: #fff;
+}
+
+.btn--accent{
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn--ghost{
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255,255,255,.35);
+}
+
+.btn--outline{
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--border);
+}
+
+/* =========================
+   HERO
 ========================= */
 
 .hero{
   position: relative;
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
   overflow: hidden;
-  padding: 120px 0 80px;
-  color: #ffffff;
 }
 
 .hero::before{
-  content: "";
-  position: absolute;
-  inset: 0;
+  content:"";
+  position:absolute;
+  inset:0;
   background:
-    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
-    url("assets/exterior.png") center / cover no-repeat;
-  z-index: 0;
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("assets/exterior.png") center/cover no-repeat;
+  transform: scale(1.02);
 }
 
-.hero .wrap{
+.hero__inner{
   position: relative;
-  z-index: 1;
+  padding: 96px 0;
+  max-width: 720px;
 }
 
-.hero h1{
-  margin: 0 0 12px;
-  font-size: 40px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-}
-
-.subtitle{
+.kicker{
+  color: rgba(255,255,255,.78);
   font-size: 12px;
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.75);
-  margin-bottom: 28px;
 }
 
-.lead{
+.hero__title{
+  margin: 14px 0 0;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  font-size: 44px;
+}
+
+.hero__sub{
+  margin: 18px 0 0;
+  color: rgba(255,255,255,.86);
   font-size: 18px;
-  max-width: 720px;
-  margin-bottom: 16px;
-  color: #ffffff;
+  max-width: 52ch;
 }
 
-.hero p{
-  color: rgba(255,255,255,.9);
+.hero__cta{
+  margin-top: 26px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero__note{
+  margin-top: 24px;
+  color: rgba(255,255,255,.65);
+  font-size: 13px;
 }
 
 /* =========================
@@ -141,38 +211,96 @@ a:hover{
 ========================= */
 
 .section{
-  padding: 80px 0;
-  border-top: 1px solid var(--border-soft);
+  padding: 24px 0;
 }
 
-.section h2{
-  margin: 0 0 24px;
-  font-size: 24px;
+.section--muted{
+  background: var(--muted);
+}
+
+.section__header{
+  margin-bottom: 24px;
+}
+
+.section__header h2{
+  margin: 0;
+  font-size: 30px;
   letter-spacing: -0.01em;
 }
 
-.section h3{
-  margin-top: 32px;
-  font-size: 18px;
+.section__header h3{
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
 }
 
-.section p{
-  max-width: 760px;
-  margin: 0 0 16px;
+.section__header p{
+  margin: 12px 0 0;
+  color: rgba(0,0,0,.72);
+  max-width: 74ch;
 }
 
-.section ul{
-  margin: 0 0 16px;
+/* =========================
+   GRID + CARDS
+========================= */
+
+.grid{
+  margin-top: 20px;
+  display: grid;
+  gap: 14px;
+}
+
+.grid--2{
+  grid-template-columns: 1fr;
+}
+
+.grid--3{
+  grid-template-columns: 1fr;
+}
+
+.card{
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 22px;
+}
+
+.card h3{
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+
+.card p{
+  margin: 10px 0 0;
+  color: rgba(0,0,0,.72);
+}
+
+.card ul{
+  margin: 12px 0 0;
   padding-left: 18px;
-  max-width: 760px;
+  color: rgba(0,0,0,.72);
 }
 
-.section li{
+.card li{
   margin: 6px 0;
 }
 
-.section-dark{
-  background: var(--muted-bg);
+/* =========================
+   CONTACT
+========================= */
+
+.actions{
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.smallprint{
+  margin-top: 14px;
+  font-size: 13px;
+  color: rgba(0,0,0,.60);
 }
 
 /* =========================
@@ -181,10 +309,30 @@ a:hover{
 
 .footer{
   border-top: 1px solid var(--border-soft);
-  padding: 40px 0;
-  font-size: 14px;
+  padding: 28px 0;
   color: rgba(0,0,0,.60);
-  text-align: center;
+  font-size: 13px;
+}
+
+.footer__inner{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__links{
+  display: flex;
+  gap: 18px;
+}
+
+/* =========================
+   SUBTLE
+========================= */
+
+.subtle{
+  margin-top: 6px;
+  color: rgba(0,0,0,.55);
+  font-size: 14px;
 }
 
 /* =========================
@@ -201,16 +349,35 @@ a:hover{
     display: flex;
   }
 
-  .hero h1{
-    font-size: 56px;
+  .hero__title{
+    font-size: 62px;
   }
 
+  .hero__inner{
+    padding: 120px 0;
+  }
+
+  .section{
+    padding: 32px 0;
+  }
+
+  .grid--2{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--3{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__inner{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 @media (max-width: 420px){
-
-  .hero h1{
-    font-size: 32px;
+  .hero__title{
+    font-size: 38px;
   }
-
 }
