@@ -26,18 +26,7 @@
         <img src="dcg-logo.png" alt="Digital Capital Group" class="brand__img" height="48" />
       </a>
 
-      <button
-        class="nav__toggle"
-        type="button"
-        aria-label="Open menu"
-        aria-expanded="false"
-        aria-controls="primary-nav">
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-      </button>
-
-      <nav id="primary-nav" class="nav__links" aria-label="Primary">
+      <nav class="nav__links" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -165,30 +154,6 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    (function () {
-      var btn = document.querySelector(".nav__toggle");
-      var menu = document.getElementById("primary-nav");
-      if (!btn || !menu) return;
-
-      function setOpen(open) {
-        btn.setAttribute("aria-expanded", open ? "true" : "false");
-        btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-        document.querySelector(".nav").classList.toggle("is-open", open);
-      }
-
-      btn.addEventListener("click", function () {
-        setOpen(btn.getAttribute("aria-expanded") !== "true");
-      });
-
-      menu.addEventListener("click", function (e) {
-        if (e.target.tagName === "A") setOpen(false);
-      });
-
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") setOpen(false);
-      });
-    })();
   </script>
 
 </body>
